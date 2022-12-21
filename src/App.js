@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from 'react-bootstrap/Button';
+import DragFile from './dragFile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<>
+  <div id='box'> 
+    <div id='container'>
+      <span id='first'>
+        <DragFile/>
+      </span>
+      <span id='second'>-or-</span>
+      <span id='three'>
+      <label for="upload-file" >Browse</label>
+        <input type="file" name="file" id="upload-file" />
+      </span>
     </div>
-  );
+  </div>
+</>
+);
 }
 
 export default App;
